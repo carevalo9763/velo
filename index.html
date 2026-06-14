@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velo — Inflate Everything. Instantly.</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">VELO</a>
+    <div class="nav-links">
+      <a href="order.html">Buy Now</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <!-- 1. SCROLL VIDEO HERO -->
+  <section class="scroll-section" id="scrollSection">
+    <div class="scroll-sticky">
+      <div class="scroll-loader" id="scrollLoader">
+        <div class="loader-spinner"></div>
+        <p class="loader-text" id="loaderText">Loading…</p>
+        <div class="loader-bar-track">
+          <div class="loader-bar" id="loaderBar"></div>
+        </div>
+      </div>
+      <canvas id="scrollCanvas" class="scroll-video"></canvas>
+      <div class="scroll-fade-top"></div>
+      <div class="scroll-fade-bottom"></div>
+      <div class="scroll-cue" id="scrollCue">
+        <span>Scroll</span>
+        <div class="scroll-cue-line"></div>
+      </div>
+      <div class="scroll-overlay" id="scrollOverlay">
+        <h1 class="scroll-overlay-title"><span class="blue">VELO</span></h1>
+        <p class="scroll-overlay-tagline">Pocket Sized Power &nbsp;·&nbsp; Zero Effort</p>
+        <p class="scroll-overlay-sub">Inflate Everything. Instantly.</p>
+        <a href="order.html" class="btn-primary magnetic">Get Yours — $24.99</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. THREE PRODUCTS LINEUP -->
+  <section class="products-section">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">The Evolution</p>
+      <h2>Meet the <span class="blue">next generation.</span></h2>
+      <p class="section-sub">Same concept. Completely reimagined.</p>
+    </div>
+    <div class="products-grid">
+
+      <!-- ETENWOLF Blue — left -->
+      <div class="product-card product-old reveal">
+        <div class="product-gen-label">Previous Gen</div>
+        <div class="product-img-wrap">
+          <img src="etenwofl blue.png" alt="Previous Gen" />
+        </div>
+        <div class="product-card-info">
+          <h3>Previous Gen</h3>
+          <span class="product-tag old-tag">Sold Out</span>
+        </div>
+      </div>
+
+      <!-- VELO — center featured -->
+      <a href="order.html#buy" class="product-card product-featured-card reveal" style="text-decoration:none;color:inherit;">
+        <div class="product-gen-label gen-new">New · <span class="blue">Velo</span></div>
+        <div class="product-img-wrap product-img-featured" style="padding:0;min-height:280px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+          <img src="Product pic cropped.png" alt="Velo Mini Air Pump" style="width:100%;height:280px;object-fit:contain;" />
+        </div>
+        <div class="product-card-info">
+          <h3 class="featured-name"><span class="blue">Velo</span> Mini Pump</h3>
+          <p>Faster. Lighter. Smarter. Built for 2026.</p>
+          <span class="product-tag">$24.99 — In Stock</span>
+        </div>
+      </a>
+
+      <!-- ETENWOLF Orange — right -->
+      <div class="product-card product-old reveal">
+        <div class="product-gen-label">Gen 2</div>
+        <div class="product-img-wrap">
+          <img src="eten wofl org.png" alt="Gen 2" />
+        </div>
+        <div class="product-card-info">
+          <h3>Gen 2</h3>
+          <span class="product-tag old-tag">Sold Out</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. SAMPLE VIDEOS -->
+  <section class="videos-section">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">See it in action</p>
+      <h2>People are <span class="blue">obsessed.</span></h2>
+      <p class="section-sub">Watch how fast this thing works in real life.</p>
+    </div>
+    <div class="videos-grid">
+      <div class="video-card reveal">
+        <video src="Video1.mp4" controls playsinline muted loop preload="metadata"></video>
+      </div>
+      <div class="video-card reveal">
+        <video src="video2mp4.mp4" controls playsinline muted loop preload="metadata"></video>
+      </div>
+      <div class="video-card reveal">
+        <video src="video3mp4.mp4" controls playsinline muted loop preload="metadata"></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. REVIEWS -->
+  <section class="reviews-section">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">What people are saying</p>
+      <h2>2,000+ happy <span class="blue">customers.</span></h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Inflated my entire pool setup in under 2 minutes. No more blowing until I pass out lmao. Best $25 I've spent this summer."</p>
+        <div class="review-author">— Marcus T.</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Took it camping and it inflated 3 sleeping pads and 2 pillows off one charge. Tiny thing but it goes HARD."</p>
+        <div class="review-author">— Jasmine R.</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"My kids wanted the pool floats up NOW. This thing did it in seconds. They were shook. I was shook. 10/10."</p>
+        <div class="review-author">— Daniel K.</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">"Super compact and powerful. Fits in my beach bag no problem. Shipping was fast too. Would def buy again."</p>
+        <div class="review-author">— Sofia M.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. PRICING -->
+  <section class="pricing-section">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Simple pricing</p>
+      <h2>Upgraded tech.<br /><span class="blue">Better price.</span></h2>
+      <p class="section-sub">Velo is what the next generation of portable pumps looks like.</p>
+    </div>
+    <div class="pricing-grid pricing-grid-three">
+
+      <!-- ETENWOLF Blue — left -->
+      <div class="pricing-card pricing-soldout reveal">
+        <div class="pricing-badge soldout-badge">Sold Out</div>
+        <img src="etenwofl blue.png" alt="Previous Gen" class="pricing-img" />
+        <h3 class="pricing-name">Previous Gen</h3>
+        <div class="pricing-price soldout-price">$29.99</div>
+        <ul class="pricing-perks soldout-perks">
+          <li>Previous generation</li>
+          <li>4 Nozzle Attachments</li>
+          <li>2600mAh Battery</li>
+          <li>Out of Stock</li>
+        </ul>
+        <button class="btn-soldout" disabled>Sold Out</button>
+      </div>
+
+      <!-- Velo — center featured -->
+      <div class="pricing-card pricing-featured reveal">
+        <div class="pricing-badge">Next Gen</div>
+        <img src="Product pic cropped.png" alt="Velo" class="pricing-img" style="width:180px;height:180px;" />
+        <h3 class="pricing-name"><span class="blue">Velo</span> Mini Pump</h3>
+        <div class="pricing-price">$24.99</div>
+        <ul class="pricing-perks">
+          <li>✓ Free Shipping</li>
+          <li>✓ 4 Nozzle Attachments</li>
+          <li>✓ 2400mAh Battery</li>
+          <li>✓ 30-Day Returns</li>
+          <li>✓ In Stock Now</li>
+        </ul>
+        <a href="order.html" class="btn-primary magnetic" style="display:block;text-align:center;">Buy Now</a>
+      </div>
+
+      <!-- ETENWOLF Orange — right -->
+      <div class="pricing-card pricing-soldout reveal">
+        <div class="pricing-badge soldout-badge">Sold Out</div>
+        <img src="eten wofl org.png" alt="Gen 2" class="pricing-img" />
+        <h3 class="pricing-name">Gen 2</h3>
+        <div class="pricing-price soldout-price">$29.99</div>
+        <ul class="pricing-perks soldout-perks">
+          <li>Previous generation</li>
+          <li>4 Nozzle Attachments</li>
+          <li>2600mAh Battery</li>
+          <li>Out of Stock</li>
+        </ul>
+        <button class="btn-soldout" disabled>Sold Out</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">VELO</div>
+    <div class="footer-links">
+      <a href="order.html">Buy</a>
+      <a href="about.html">About</a>
+    </div>
+    <p class="footer-copy">© 2026 Velo. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
