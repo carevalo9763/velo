@@ -68,7 +68,7 @@ if (canvas) {
     if (rafRunning) return;
     rafRunning = true;
     const tick = () => {
-      currentFrame += (targetFrame - currentFrame) * 0.15;
+      currentFrame += (targetFrame - currentFrame) * 0.25;
       const frameIndex = Math.round(currentFrame);
       drawFrame(Math.max(0, Math.min(FRAME_COUNT - 1, frameIndex)));
       requestAnimationFrame(tick);

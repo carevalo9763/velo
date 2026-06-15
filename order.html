@@ -10,7 +10,7 @@
 
   <!-- NAV -->
   <nav class="nav">
-    <a href="index.html" class="nav-logo">VELO</a>
+    <a href="index.html" class="nav-logo"><img src="Brand LOGO Velo.png" alt="Velo" class="nav-logo-img" /><span class="nav-logo-text">ELO</span></a>
     <div class="nav-links">
       <a href="order.html">Buy Now</a>
       <a href="about.html">About</a>
@@ -61,7 +61,7 @@
       </div>
 
       <div class="order-btn-group">
-        <button onclick="openCheckout()" class="btn-primary magnetic">Buy Now — $24.99</button>
+        <div id='product-component-1781456458834'></div>
         <a href="index.html" class="btn-secondary">← Back to Home</a>
       </div>
     </div>
@@ -91,145 +91,92 @@
     <p class="footer-copy">© 2026 Velo. All rights reserved.</p>
   </footer>
 
-  <!-- CHECKOUT MODAL -->
-  <div class="modal-overlay" id="modalOverlay" onclick="closeCheckout(event)">
-    <div class="modal" id="checkoutModal">
-      <button class="modal-close" onclick="closeCheckout()">✕</button>
-
-      <div class="modal-header">
-        <h2>Complete Your Order</h2>
-        <p class="modal-sub">Velo Mini Pump — $24.99 · Free Shipping</p>
-      </div>
-
-      <form class="checkout-form" id="checkoutForm" onsubmit="handleOrder(event)">
-
-        <div class="form-section-label">Contact</div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>First Name</label>
-            <input type="text" name="firstName" placeholder="John" required />
-          </div>
-          <div class="form-group">
-            <label>Last Name</label>
-            <input type="text" name="lastName" placeholder="Doe" required />
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" name="email" placeholder="john@example.com" required />
-        </div>
-        <div class="form-group">
-          <label>Phone</label>
-          <input type="tel" name="phone" placeholder="+1 (555) 000-0000" required />
-        </div>
-
-        <div class="form-section-label">Shipping Address</div>
-        <div class="form-group">
-          <label>Address</label>
-          <input type="text" name="address" placeholder="123 Main St" required />
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>City</label>
-            <input type="text" name="city" placeholder="Los Angeles" required />
-          </div>
-          <div class="form-group">
-            <label>State</label>
-            <input type="text" name="state" placeholder="CA" required />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>ZIP</label>
-            <input type="text" name="zip" placeholder="90001" required />
-          </div>
-          <div class="form-group">
-            <label>Country</label>
-            <input type="text" name="country" placeholder="United States" required />
-          </div>
-        </div>
-
-        <div class="form-section-label">Payment</div>
-        <div class="form-group">
-          <label>Card Number</label>
-          <input type="text" name="card" placeholder="1234 5678 9012 3456" maxlength="19" required />
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Expiry</label>
-            <input type="text" name="expiry" placeholder="MM/YY" maxlength="5" required />
-          </div>
-          <div class="form-group">
-            <label>CVV</label>
-            <input type="text" name="cvv" placeholder="123" maxlength="4" required />
-          </div>
-        </div>
-
-        <div class="order-summary">
-          <div class="summary-row">
-            <span>Velo Mini Air Pump × 1</span>
-            <span>$24.99</span>
-          </div>
-          <div class="summary-row">
-            <span>Shipping</span>
-            <span class="blue">Free</span>
-          </div>
-          <div class="summary-row summary-total">
-            <span>Total</span>
-            <span>$24.99</span>
-          </div>
-        </div>
-
-        <button type="submit" class="btn-primary order-submit">Place Order — $24.99</button>
-        <p class="secure-note">🔒 Secure checkout. Your info is encrypted.</p>
-      </form>
-
-      <!-- Success -->
-      <div class="order-success" id="orderSuccess" style="display:none;">
-        <div class="success-icon">✓</div>
-        <h2>Order Placed!</h2>
-        <p>Thanks! You'll receive a confirmation email shortly.</p>
-        <button onclick="closeCheckout()" class="btn-primary magnetic" style="margin-top:24px;">Done</button>
-      </div>
-
-    </div>
-  </div>
 
   <script src="js/main.js"></script>
-  <script>
-    function openCheckout() {
-      document.getElementById('modalOverlay').classList.add('active');
-      document.body.style.overflow = 'hidden';
+  <script type="text/javascript">
+  /*<![CDATA[*/
+  (function () {
+    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+    if (window.ShopifyBuy) {
+      if (window.ShopifyBuy.UI) {
+        ShopifyBuyInit();
+      } else {
+        loadScript();
+      }
+    } else {
+      loadScript();
     }
-
-    document.querySelector('[name="card"]').addEventListener('input', (e) => {
-      let v = e.target.value.replace(/\D/g, '').substring(0, 16);
-      e.target.value = v.replace(/(.{4})/g, '$1 ').trim();
-    });
-
-    document.querySelector('[name="expiry"]').addEventListener('input', (e) => {
-      let v = e.target.value.replace(/\D/g, '').substring(0, 4);
-      if (v.length >= 2) v = v.substring(0, 2) + '/' + v.substring(2);
-      e.target.value = v;
-    });
-
-    function handleOrder(e) {
-      e.preventDefault();
-      document.getElementById('checkoutForm').style.display = 'none';
-      document.getElementById('orderSuccess').style.display = 'block';
+    function loadScript() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = scriptURL;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+      script.onload = ShopifyBuyInit;
     }
-
-    function closeCheckout(e) {
-      if (e && e.target !== document.getElementById('modalOverlay')) return;
-      document.getElementById('modalOverlay').classList.remove('active');
-      document.body.style.overflow = '';
-      // Reset form and success state for next order
-      setTimeout(() => {
-        document.getElementById('checkoutForm').style.display = 'flex';
-        document.getElementById('checkoutForm').reset();
-        document.getElementById('orderSuccess').style.display = 'none';
-      }, 300);
+    function ShopifyBuyInit() {
+      var client = ShopifyBuy.buildClient({
+        domain: 'yz4bep-x0.myshopify.com',
+        storefrontAccessToken: '487ffec6fc851f713937d38191267600',
+      });
+      ShopifyBuy.UI.onReady(client).then(function (ui) {
+        ui.createComponent('product', {
+          id: '10559886950678',
+          node: document.getElementById('product-component-1781456458834'),
+          moneyFormat: '%24%7B%7Bamount%7D%7D',
+          options: {
+            "product": {
+              "styles": {
+                "product": {
+                  "@media (min-width: 601px)": {
+                    "max-width": "100%",
+                    "margin-left": "0px",
+                    "margin-bottom": "0px"
+                  }
+                },
+                "button": {
+                  ":hover": { "background-color": "#00bde6" },
+                  "background-color": "#00D4FF",
+                  "color": "#000000",
+                  "font-weight": "700",
+                  "border-radius": "12px",
+                  "padding": "16px 40px",
+                  "font-size": "16px",
+                  ":focus": { "background-color": "#00bde6" }
+                }
+              },
+              "buttonDestination": "checkout",
+              "text": { "button": "Buy Now — $24.99" },
+              "contents": {
+                "img": false,
+                "title": false,
+                "price": false
+              }
+            },
+            "cart": {
+              "styles": {
+                "button": {
+                  ":hover": { "background-color": "#00bde6" },
+                  "background-color": "#00D4FF",
+                  "color": "#000000"
+                }
+              },
+              "text": { "total": "Subtotal", "button": "Checkout" }
+            },
+            "toggle": {
+              "styles": {
+                "toggle": {
+                  "background-color": "#00D4FF",
+                  ":hover": { "background-color": "#00bde6" },
+                  ":focus": { "background-color": "#00bde6" }
+                }
+              }
+            }
+          }
+        });
+      });
     }
+  })();
+  /*]]>*/
   </script>
 </body>
 </html>
