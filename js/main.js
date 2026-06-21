@@ -16,10 +16,15 @@ let rafRunning = false;
 
 if (canvas) {
   const ctx = canvas.getContext('2d');
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
   const setCanvasSize = () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    canvas.style.width = w + 'px';
+    canvas.style.height = h + 'px';
   };
   setCanvasSize();
   window.addEventListener('resize', () => {
@@ -30,15 +35,17 @@ if (canvas) {
   const drawFrame = (index) => {
     const img = frames[index];
     if (!img || !img.complete) return;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const cw = canvas.width;
+    const ch = canvas.height;
+    ctx.clearRect(0, 0, cw, ch);
     const isMobile = window.innerWidth <= 600;
     const scale = isMobile
-      ? Math.min(canvas.width / img.width, canvas.height / img.height)
-      : Math.max(canvas.width / img.width, canvas.height / img.height);
+      ? Math.min(cw / img.width, ch / img.height)
+      : Math.max(cw / img.width, ch / img.height);
     const w = img.width * scale;
     const h = img.height * scale;
-    const x = (canvas.width - w) / 2;
-    const y = (canvas.height - h) / 2;
+    const x = (cw - w) / 2;
+    const y = (ch - h) / 2;
     ctx.drawImage(img, x, y, w, h);
   };
 
