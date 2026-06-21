@@ -1507,4 +1507,8 @@ body {
 @media (max-width: 600px) {
   .features-grid { grid-template-columns: 1fr; }
   .order-specs { grid-template-columns: 1fr; }
+  .scroll-section { height: 220vh; }
+  .scroll-overlay-title { font-size: 56px; }
+  .scroll-overlay-tagline { font-size: 13px; }
+  .scroll-overlay-sub { font-size: 13px; }
 }

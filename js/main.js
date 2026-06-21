@@ -31,7 +31,10 @@ if (canvas) {
     const img = frames[index];
     if (!img || !img.complete) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
+    const isMobile = window.innerWidth <= 600;
+    const scale = isMobile
+      ? Math.min(canvas.width / img.width, canvas.height / img.height)
+      : Math.max(canvas.width / img.width, canvas.height / img.height);
     const w = img.width * scale;
     const h = img.height * scale;
     const x = (canvas.width - w) / 2;
