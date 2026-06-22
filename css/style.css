@@ -585,8 +585,7 @@ body {
 
 .video-card video {
   width: 100%;
-  aspect-ratio: 9/16;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
